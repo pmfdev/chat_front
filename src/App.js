@@ -12,7 +12,7 @@ const ChatApp = () => {
   // Función para conectarse a WebSocket
   const connectToWebSocket = () => {
     const stompClient = new Client({
-      webSocketFactory: () => new SockJS('https://pmfdev.es/chatApi/chat-websocket'),
+      webSocketFactory: () => new SockJS('http://localhost:8080/chatApi/chat-websocket'),
       onConnect: () => {
         console.log("Conectado al WebSocket");
 
